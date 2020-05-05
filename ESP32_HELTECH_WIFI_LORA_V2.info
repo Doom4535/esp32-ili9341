@@ -1,3 +1,5 @@
+// See: http://resource.heltec.cn/download/WiFi_LoRa_32/WIFI_LoRa_32_V2.pdf
+// Wiki: https://heltec-automation-docs.readthedocs.io/en/latest/esp32/index.html
 #define OLED_RST    16
 #define Vext_CTRL   21
 
