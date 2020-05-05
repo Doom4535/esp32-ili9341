@@ -1,0 +1,16 @@
+#define OLED_RST    16
+#define Vext_CTRL   21
+
+#define I2C_SDA     4
+#define I2C_SCL     15
+
+#define LORA_CS     18
+#define LORA_SCK    5
+#define LORA_MISO   19
+#define LORA_MOSI   27
+#define LORA_DIO0   26
+#define LORA_DIO1   35
+#define LORA_DIO2   34
+#define LORA_RST    14
+
+#define BOARD_VRESION   "<Heltech WiFi LoRa V2>"

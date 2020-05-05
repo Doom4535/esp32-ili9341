@@ -22,12 +22,9 @@ extern "C" void app_main(void)
 
     ssd1306_setFixedFont(ssd1306xled_font6x8);
     
-    ili9341_240x320_spi_init(5, 27, 32); 
-    gpio_pad_select_gpio(GPIO_NUM_4);
-    gpio_set_direction(GPIO_NUM_4, GPIO_MODE_OUTPUT);
-    gpio_set_level(GPIO_NUM_4, 1);
-
-    ili9341_setRotation(1);
+    ssd1306_128x64_i2c_initEx(I2C_SCL_PIN_NUM, I2C_SDA_PIN_NUM, 0);
+    
+    //ili9341_setRotation(1);
     ssd1306_clearScreen();
 
     ssd1306_negativeMode();
@@ -37,8 +34,8 @@ extern "C" void app_main(void)
     
     int x;
     char buffer[100];
-    for ( x = 0; x < 6; x++ ) {
-        sprintf(buffer,  "Testing one two ............ %d\n", x);
+    for ( x = 0; x < 8; x++ ) {
+	sprintf(buffer, "Testing %d\n", x);
         ssd1306_print(buffer);
     }
 
